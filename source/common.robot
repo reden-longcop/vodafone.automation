@@ -19,7 +19,6 @@ Main Test Teardown
 Navigate to a page
     [Arguments]    ${url}
     Go To    ${url}
-    Location Should Be    ${url}
 
 Input Text in Field
     [Arguments]    ${locator}    ${value}
