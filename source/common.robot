@@ -38,7 +38,7 @@ Get the text in element
 
 Validate element displayed
     [Arguments]    ${locators}
-    Wait Until Keyword Succeeds    10    1s    Element Should Be Visible    ${locators}
+    Wait Until Keyword Succeeds    60    1s    Element Should Be Visible    ${locators}
 
 Validate text in element
     [Arguments]    ${locators}    ${expected_text}

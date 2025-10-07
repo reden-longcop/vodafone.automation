@@ -3,7 +3,7 @@ SIM ONLY:
   plan cards:           'xpath=//div[starts-with(@data-testid, "plan-card-AU127")]'
   first plan:           'xpath=(//button[@data-testid="select-plan-cta"])[2]'
   first plan price:     'xpath=(//h5[@data-testid="price"])[1]'
-  first plan name:      'xpath=(//div[@data-testid="plan-card-title-AU12749"])[1]/span[2]'
+  first plan name:      'xpath=(//span[text()="Small Plan"])[1]'
 
 STICKY CART:
   main:                 'css=div[data-testid="sticky-cart-container"]'

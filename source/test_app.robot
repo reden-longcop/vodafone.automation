@@ -81,7 +81,6 @@ I select and add the first plan to cart
 
 I get the text value
     [Arguments]    ${locator}
-    Sleep    10s
     common.Validate element displayed    ${locator}
     ${text}=    common.Get the text in element    ${locator}
     RETURN    ${text}

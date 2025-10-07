@@ -26,7 +26,6 @@ Part 2: Add a Plan to Cart and Assert Values
     [Tags]             test    P2
     GIVEN I go to                                                         ${SIM_ONLY_PAGE}
     # AND The element is displayed                                          ${SIM ONLY['main']}
-    Sleep    10s
     
     ${expected_plan}=    
     ...    WHEN I get the text value                                      ${SIM ONLY['first plan name']}
@@ -34,13 +33,9 @@ Part 2: Add a Plan to Cart and Assert Values
     ...    AND I get the text value                                       ${SIM ONLY['first plan price']}
     AND I select and add the first plan to cart                           ${SIM ONLY['first plan']}
     
-    Sleep    10s
-    
     AND The element is displayed                                          ${STICKY CART['main']}
     ${actual_price}=    AND I get the text value                          ${STICKY CART['cart cost']}    
     THEN The amount displayed should be correct                           ${actual_price}    ${expected_price}
-    
-    Sleep    10s
     
     WHEN I continue to Cart                                               ${STICKY CART['continue to cart']}
     ${actual_plan}=    AND I get the text value                           ${CART PAGE['plan label']}
