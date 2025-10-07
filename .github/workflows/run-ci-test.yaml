@@ -18,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.13'
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
@@ -31,9 +31,9 @@ jobs:
 
     - name: Run Robot Framework tests
       run: |
-        robot -d logs/chrome -v BROWSER:headlesschrome -v BASE_URL:https://www.vodafone.com.au/ -i test tests
+        robot --listener RetryFailed:2 -d logs/chrome -v BROWSER:chrome -v BASE_URL:https://www.vodafone.com.au/ -i test tests
       env:
-        BASE_URL: https://www.vodafone.com.au
+        BASE_URL: https://www.vodafone.com.au/
 
     - name: Upload test artifacts on failure
       if: failure()

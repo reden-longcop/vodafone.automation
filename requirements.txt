@@ -1,4 +1,5 @@
 robotframework-seleniumlibrary
 robotframework-yamllibrary
+robotframework-retryfailed
 webdriver-manager
 requests
