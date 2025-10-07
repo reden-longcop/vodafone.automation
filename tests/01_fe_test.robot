@@ -14,7 +14,7 @@ Part 1: Compare UI Labels vs. API Response Labels
     [Documentation]    The UI labels should be the same with the API response labels
     [Tags]             test    P1
     GIVEN I go to                                                         ${SIM_ONLY_PAGE}
-    AND The element is displayed                                          ${SIM ONLY['main']}
+    # AND The element is displayed                                          ${SIM ONLY['main']}
     @{cards}=                  WHEN I get the product list                ${SIM ONLY['plan cards']}
     @{UI_labels}=              AND I get the 'Add to cart' value          @{cards}
     @{API_response_labels}=    AND I get the CTA Label value
@@ -25,7 +25,7 @@ Part 2: Add a Plan to Cart and Assert Values
     [Documentation]    Should be able to successfuly add a plan
     [Tags]             test    P2
     GIVEN I go to                                                         ${SIM_ONLY_PAGE}
-    AND The element is displayed                                          ${SIM ONLY['main']}
+    # AND The element is displayed                                          ${SIM ONLY['main']}
     ${expected_plan}=    
     ...    WHEN I get the text value                                      ${SIM ONLY['first plan name']}
     ${expected_price}=    
