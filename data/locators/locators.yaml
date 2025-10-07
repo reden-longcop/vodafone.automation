@@ -1,0 +1,15 @@
+SIM ONLY:
+  main:                 'xpath=(//div[@data-testid="experience-fragment"])[2]'
+  plan cards:           'xpath=//div[starts-with(@data-testid, "plan-card-AU127")]'
+  first plan:           'xpath=(//button[@data-testid="select-plan-cta"])[2]'
+  first plan price:     'xpath=(//h5[@data-testid="price"])[1]'
+  first plan name:      'xpath=(//div[@data-testid="plan-card-title-AU12749"])[1]/span[2]'
+
+STICKY CART:
+  main:                 'css=div[data-testid="sticky-cart-container"]'
+  cart cost:            'css=text[data-testid="sticky-cart-cost"]'
+  continue to cart:     'css=button[data-testid="sticky-cart-title-cta-button"]'
+
+CART PAGE:
+  plan label:            'xpath:((//div[@data-testid="divider"])[1]/../following-sibling::div//h3)[1]'
+  plan price:            'xpath=((//div[@data-testid="divider"])[1]/../..//span[2])[2]'

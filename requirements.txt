@@ -1,0 +1,4 @@
+robotframework-seleniumlibrary
+robotframework-yamllibrary
+webdriver-manager
+requests
